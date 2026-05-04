@@ -170,13 +170,13 @@ version = "0.6"
 # Private
 [target.'cfg(all(target_arch = "wasm32", any(target_os = "unknown", target_os = "none")))'.dependencies.wasm-bindgen]
 default-features = false
-version = "0.2"
+path="../wasm-bindgen"
 optional = true
 
 # Private
 [target.'cfg(all(target_arch = "wasm32", any(target_os = "unknown", target_os = "none"), target_feature = "atomics"))'.dependencies.js-sys]
 default-features = false
-version = "0.3"
+path="../wasm-bindgen/crates/js-sys"
 optional = true
 
 [dev-dependencies.serde]
@@ -192,10 +192,10 @@ version = "1.0"
 version = "1.0.56"
 
 [target.'cfg(all(target_arch = "wasm32", any(target_os = "unknown", target_os = "none")))'.dev-dependencies.wasm-bindgen]
-version = "0.2"
+path="../wasm-bindgen"
 
 [target.'cfg(all(target_arch = "wasm32", any(target_os = "unknown", target_os = "none")))'.dev-dependencies.wasm-bindgen-test]
-version = "0.3"
+path="../wasm-bindgen/crates/test"
 
 [dev-dependencies.trybuild]
 version = "1.0.52"
